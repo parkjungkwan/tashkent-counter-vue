@@ -2,6 +2,7 @@
 <div>
 <router-link to="/home">Home</router-link>
 <router-link to="/counter" style="margin:20px 20px">Counter</router-link>
+<router-link to="/todo" style="margin:20px 20px">TODO</router-link>
 <router-view/>
 </div> 
 

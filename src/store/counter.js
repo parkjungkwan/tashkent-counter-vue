@@ -26,11 +26,8 @@ const getters={
     }
 }
 export default {
-    name: 'counter',
-    namespace: true,
     state,
     getters,
     actions,
     mutations
-
 }

@@ -12,12 +12,7 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'counter',
 
-  /* data(){
-      return{
-          counter: this.$store.state.counter.count
-
-      }
-  }, */
+  
   methods:{
     increment(){
         this.$store.dispatch('increment')
