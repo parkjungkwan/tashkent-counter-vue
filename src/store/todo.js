@@ -1,9 +1,10 @@
 const state ={
-    todo: '프로젝트 수행'
+    todo: []
 
 }
 const mutations ={
     addTodo(state, payload){
+        alert(`변이에  할일 추가 클릭 !! ${payload}`)
         state.todo = payload
     },
     editTodo(state, payload){
@@ -21,7 +22,10 @@ const mutations ={
 const actions={
 
 
-    addTodo:({commit}) => commit('addTodo'),
+    addTodo:({commit},{task}) =>{
+        
+        commit('addTodo', task)
+    } ,
     editTodo:({commit})=> commit('editTodo'),
     toggleTodo:({commit})=> commit('toggleTodo'),
     removeTodo:({commit})=> commit('removeTodo')

@@ -7,7 +7,7 @@
     </li>
     <div class="add">
       <input id="addTodo" type="text" />
-      <button type="button">할일추가</button>
+      <button type="button" @click = "addTask">할일추가</button>
     </div>
     
   </main>
@@ -24,7 +24,11 @@ export default {
       'editTodo',
       'toggleTodo',
       'removeTodo'
-    ])
+    ]),
+    addTask(){
+      let task = document.getElementById('addTodo').value
+      this.$store.dispatch('addTodo', {'task':task})
+    }
   },
   computed: {
     ...mapGetters(['getTodo'])
