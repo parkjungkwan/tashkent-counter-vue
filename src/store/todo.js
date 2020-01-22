@@ -1,12 +1,41 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import counter from '@/store/counter'
+const state ={
+    todo: '프로젝트 수행'
 
-Vue.use(Vuex)
-
-export const store = new Vuex.Store({
-    modules:{
-        counter
+}
+const mutations ={
+    addTodo(state, payload){
+        state.todo = payload
     },
-    strict: true
-})
+    editTodo(state, payload){
+        state.todo = payload
+    },
+    toggleTodo(state, payload){
+        state.todo = payload
+    },
+    removeTodo(state, payload){
+        state.todo = payload
+    }
+
+}
+
+const actions={
+
+
+    addTodo:({commit}) => commit('addTodo'),
+    editTodo:({commit})=> commit('editTodo'),
+    toggleTodo:({commit})=> commit('toggleTodo'),
+    removeTodo:({commit})=> commit('removeTodo')
+
+
+}
+const getters={
+    getTodo: function (state) {
+      return state.todo;
+    }
+}
+export default {
+    state,
+    getters,
+    actions,
+    mutations
+}

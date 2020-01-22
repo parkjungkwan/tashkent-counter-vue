@@ -10,9 +10,6 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
-  name: 'counter',
-
-  
   methods:{
     increment(){
         this.$store.dispatch('increment')
